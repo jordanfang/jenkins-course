@@ -35,3 +35,7 @@ EXPOSE 22
 
 CMD /usr/sbin/init
 
+# make sure host keys are regenerated before sshd starts
+COPY entrypoint.sh /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
