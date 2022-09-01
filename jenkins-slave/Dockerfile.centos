@@ -7,6 +7,7 @@ RUN yum install -y git curl openssh-server java-17-openjdk.x86_64
 
 # remove host keys
 RUN rm -rf /etc/ssh/ssh_host_*
+RUN echo "root:123456" | chpasswd
 
 # prepare home, user for jenkins
 ENV JENKINS_HOME /var/jenkins_home
