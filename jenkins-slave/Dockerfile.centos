@@ -32,3 +32,6 @@ RUN mkdir -p /tmp/download && \
 
 # expose ssh port
 EXPOSE 22
+
+CMD /usr/sbin/init
+
