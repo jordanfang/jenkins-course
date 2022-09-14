@@ -33,6 +33,7 @@ RUN mkdir -p /tmp/download && \
 
 # expose ssh port
 EXPOSE 22
+RUN rm -rf /run/nologin
 
 # make sure host keys are regenerated before sshd starts
 COPY entrypoint.sh /entrypoint.sh
